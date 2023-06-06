@@ -1,3 +1,7 @@
+body {
+  background-color: #fff;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -106,3 +110,52 @@
     color: #5C73DB;
   }
   
+  
+  #rodape {
+    background: #171923;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graficos {
+  display: flex;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+.card {
+  align-items: center;
+  max-width: 300px;
+  margin-left: 500px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #fff; /* Azul marinho claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de elevação */
+  border-radius: 20px; /* Borda arredondada */
+  padding: 20px; /* Espaçamento interno */
+  color: #FFFFFF; /* Cor do texto */
+}
+
+.card2 {
+  align-items: center;
+  max-width: 300px;
+  margin-left: 100px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #fff; /* Azul marinho claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Efeito de elevação */
+  border-radius: 20px; /* Borda arredondada */
+  padding: 20px; /* Espaçamento interno */
+  color: #FFFFFF; /* Cor do texto */
+}
+
+.row { 
+  display: flex;
+}

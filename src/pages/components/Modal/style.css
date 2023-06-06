@@ -1,7 +1,3 @@
-body {
-    background-color: #171923;
-}
-
 .container {
     display: flex;
     justify-content: flex-end;
@@ -14,7 +10,4 @@ body {
     transition-duration: 5s;
   }
 
- 
-  .content {
-    margin-top: -500px;
-  }
+  

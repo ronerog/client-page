@@ -4,7 +4,7 @@ import {
   FaTimes, 
   FaRegSun, 
   FaUserAlt, 
-  FaRegFileAlt,
+  FaHome,
   FaWallet
 } from 'react-icons/fa'
 
@@ -24,13 +24,15 @@ const Sidebar = ({ active }) => {
     <Container sidebar={active}>
       <FaTimes onClick={closeSidebar} />  
       <Content>
+      <Link to="/homepage">
+      <SidebarItem Icon={FaHome} Text="Início" />
+      </Link>
         <Link to="/user">
         <SidebarItem Icon={FaUserAlt} Text="Usuário" />
         </Link>
         <Link to="/boletos">
         <SidebarItem Icon={FaWallet} Text="Boletos" />
         </Link>
-        <SidebarItem Icon={FaRegFileAlt} Text="Reports" />
         <Link to="/config">
         <SidebarItem Icon={FaRegSun} Text="Settings" />
         </Link>

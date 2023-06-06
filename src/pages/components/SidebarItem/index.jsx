@@ -10,4 +10,4 @@ const SidebarItem = ({ Icon, Text }) => {
   )
 }
 
-export default SidebarItem
+export default SidebarItem;

@@ -6,8 +6,11 @@ export function Config() {
     return (
         <>
         <Header />
-        <h1 className="text">Página para mudar a cor do sistema</h1>
-        <h2 className="text">ideia genial de ayron</h2>
+        <h1 className="text">Página para mudar a cor e configurações</h1>
+        
+        <footer id="rodape">
+                <p>&copy; Feito por C2Sistemas</p>
+        </footer>
         </>
     )
 }
