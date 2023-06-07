@@ -1,13 +1,82 @@
 .container {
+  animation-duration: 1s;
+  animation-fill-mode: both!important;
+  animation-name: fadeIn !important;
+
+  display: flex;
+  justify-content: flex-end;
+  max-width: 75vh;
+  background-color: #fff;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  margin-left: auto;
+}
+
+input[type="number"],
+  input[type="cc-number"],
+  input[type="password"] {
     display: flex;
-    justify-content: flex-end;
-    max-width: 80vh;
-    background-color: #fff;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    margin-left: auto;
-    transition-property: margin-left;
-    transition-duration: 5s;
+    width: 100%;
+    max-width: 450px;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    border-radius: 50px;
   }
 
-  
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.content {
+  margin-bottom: 100px;
+}
+
+.content .text {
+  margin-bottom: 35px;
+}
+
+.text h1{
+  margin-left: -75px;
+  color: #616C83
+}
+
+.text h3 {
+  text-align: center;
+  margin-top: -200px;
+  margin-left: -80px;
+  color: #747D92
+}
+
+.text h4 {
+  text-align: center;
+  margin-left: -80px;
+  color: #747D92
+}
+
+.inputContainer {
+  border-radius: 20px;
+}
+
+.inputText {
+  margin-left: 70px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 5;
+		transform: translateX(0);
+	}
+}
+
+@media (min-width: 1490px) {
+  /* Estilos para telas com largura maior que 1490px */
+  .container {
+    max-width: 100%;
+  }
+}

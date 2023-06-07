@@ -38,5 +38,5 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: 100px;
-  min-height: 78vh;
+  min-height: 75vh;
 `;

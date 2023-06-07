@@ -7,21 +7,24 @@ const Modal = () => {
     return (
         <div className="container">
         <div className="content">
+          <div className="text">
             <h1>Olá</h1>
             <h3>Acessar minha conta</h3>
             <h4>Aqui você tira segunda via, checa seu histórico e solicita serviços.</h4>
+            </div>
              <div className="inputContainer">
-            <label htmlFor="username">E-mail </label>
+
+            <label htmlFor="username" className="inputText">CPF </label>
              <input
-            type="text"
+            type="number"
             name="username"
             id="email"
-            placeholder="seuemail@email.com"
+            placeholder="12345678456"
             />
             </div>
 
         <div className="inputContainer">
-          <label htmlFor="current-password">Senha </label>
+          <label htmlFor="current-password" className="inputText">Senha </label>
           <input
             type="cc-number"
             name="current-password"
@@ -30,7 +33,7 @@ const Modal = () => {
           />
         </div>
 
-         <a href="#">Esqueceu sua senha ?</a>
+         <a href="#" className="inputText">Esqueceu sua senha ?</a>
 
         </div>
         <Link to="/homepage">
