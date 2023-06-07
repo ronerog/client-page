@@ -1,33 +1,37 @@
 import React from "react";
-import './styles.css'
+import { Grid, Typography, Table, TableContainer, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import "./styles.css";
 
 const Row = ({ record }) => {
-    const keys = Object.keys(record)
-    return (
-        (<tr key={record.id}>
-            {
-            keys.map(key => <td key={key}>{record[key]}</td>)
-            }
-        </tr>)
-    )
-}
+  const keys = Object.keys(record);
+  return (
+    <TableRow>
+      {keys.map((key) => (
+        <TableCell key={key}>{record[key]}</TableCell>
+      ))}
+    </TableRow>
+  );
+};
 
-export default function Table({ data }) {
+export default function CustomTable({ data }) {
+  const keys = Object.keys(data[0]);
 
-    const keys = Object.keys(data[0])
-    return (
-        
-        <table className="custom-table">
-            <thead>
-            <tr>
-                {
-                    keys.map(key => <th key={key}>{key}</th>)
-                }
-            </tr>
-            </thead>
-            <tbody>
-               {data.map(record => <Row record={record} />)}
-            </tbody>
-        </table>
-    )
+  return (
+    <TableContainer className="custom-table">
+      <Table>
+        <TableHead>
+          <TableRow>
+            {keys.map((key) => (
+              <TableCell key={key}>{key}</TableCell>
+            ))}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.map((record) => (
+            <Row record={record} key={record.id} />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
 }
