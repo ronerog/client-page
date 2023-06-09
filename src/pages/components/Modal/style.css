@@ -1,5 +1,5 @@
 .container {
-  animation-duration: 1s;
+  animation-duration: 2s !important;
   animation-fill-mode: both!important;
   animation-name: fadeIn !important;
 
@@ -66,10 +66,10 @@ input::-webkit-inner-spin-button {
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
-		transform: translateX(50px);
+		transform: translateX(600px);
 	}
 	100% {
-		opacity: 5;
+		opacity: 1;
 		transform: translateX(0);
 	}
 }
