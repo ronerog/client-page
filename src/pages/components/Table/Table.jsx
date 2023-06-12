@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Typography, Table, TableContainer, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
-import "./styles.css";
+import { Table, TableContainer, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import "./Table.css";
 
 const Row = ({ record }) => {
   const keys = Object.keys(record);

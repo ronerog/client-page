@@ -1,0 +1,78 @@
+.card {  
+    width: 100%;
+    min-width: 450px;
+    padding: 15px;
+    height: 250px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px 8px rgb(0 0 0 / 30%);
+}
+
+.card__visa {
+    background-image: linear-gradient(to left bottom, #051937, #012757, #003578, #00449b, #0a52bf);
+}
+
+.card__master {
+    background-image: linear-gradient(to left bottom, #c30000, #d12a00, #df4100, #ed5600, #fa6900);
+}
+
+.card__amex {
+   background-image: linear-gradient(to left bottom, #030a2d, #010933, #000739, #00053e, #000243);
+}
+
+.flag {
+    display: flex;
+    align-items: center;
+}
+
+.flag .flag__image {
+    background-size: contain;
+    display: block;
+    width: 100px;
+    height: 60px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+}
+
+.master {
+    background-image: url('https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/mastercard.png');
+}
+
+.visa {
+    background-image: url('https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/visa.png');
+}
+
+.amex  {
+    background-image: url('https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/amex.png');
+}
+
+
+.text {
+    font-size: 1.4rem;
+    color: rgb(235, 235, 235);
+    text-shadow: 2px 2px 4px #000;
+    margin-left: auto;
+}
+
+.text.small {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__info .title {
+    padding-top: 3px;
+    display: block;
+    color: rgb(194, 194, 194);
+    margin-bottom: 2px;
+    margin-top: 2px;
+    
+}
+
+.card__plano {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,12 @@
+item {
+    padding: 20px;
+}
+
+.carrossel { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    padding-top: 150px;
+    margin: 0 auto;
+}

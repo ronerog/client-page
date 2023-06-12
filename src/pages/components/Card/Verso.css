@@ -1,0 +1,17 @@
+.text-verso {
+    font-size: 1.4rem;
+    color: rgb(235, 235, 235);
+    text-shadow: 2px 2px 4px #000;
+    margin-left: auto;
+}
+
+.text.small {
+    font-size: 0.6rem;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.card-verso {
+    margin-top: -50px;
+}
