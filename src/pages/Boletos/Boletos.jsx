@@ -1,5 +1,5 @@
 
-import Header from "../components/Header/Header"
+import Sidebar from "../components/SideBar/SideBar"
 import Table from "../components/Table/Table"
 import './Boletos.css'
 
@@ -28,18 +28,11 @@ export function Boletos() {
 
     ]
     return (
-        <><header>
-                <Header />
-            </header>
+        <>
+        <Sidebar />
                 <div>
-                    <body>
-                        <h1>Página para visualizar boletos</h1>
                         <Table data={DATA1} />
-                    </body>
                 </div>
-                <footer id="rodape">
-                <p>&copy; Feito por C2Sistemas</p>
-                </footer>
         </>
     )
 }

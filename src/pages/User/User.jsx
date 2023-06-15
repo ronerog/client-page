@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Typography, TextField, Button } from "@mui/material";
-import Header from "../components/Header/Header";
+// import Header from "../components/Header/Header";
 import "./User.css";
+import Sidebar from '../components/SideBar/SideBar';
 
 
 export function User() {
@@ -22,12 +23,11 @@ export function User() {
 
   return (
     <>
-      <Header />
-      <h1 className="text">
-        Página visualizar os dados do usuário e trocar senha
-      </h1>
+    
+      <Sidebar/>
       
-      <form className="user-form">
+      <div className='div-form'>
+      <div className="user-form">
         <Typography variant="body1">
           Nome: {data?.CLI_NOME}
         </Typography>
@@ -57,12 +57,8 @@ export function User() {
           <Typography variant="body1">
           Estado: {data?.CID_UF}
           </Typography>
-        </form> 
-      <footer id="rodape">
-        <Typography variant="body1">
-          &copy; Feito por C2Sistemas
-        </Typography>
-      </footer>
+        </div>
+        </div>
     </>
   );
 }

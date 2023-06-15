@@ -1,16 +1,12 @@
 import React from "react"
-import Header from "../components/Header/Header"
+import Sidebar from "../components/SideBar/SideBar"
+// import Header from "../components/Header/Header"
 import './Config.css'
 
 export function Config() {
     return (
         <>
-        <Header />
-        <h1 className="text">Página para mudar a cor e configurações</h1>
-        
-        <footer id="rodape">
-                <p>&copy; Feito por C2Sistemas</p>
-        </footer>
+        <Sidebar />
         </>
     )
 }

@@ -1,9 +1,8 @@
+
 .TableContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 1000px ;
-    height: 100%;
+    max-height: 75%;
+    margin-top: 300px;
     margin-left: 350px;
     margin-bottom: 350px;
   }

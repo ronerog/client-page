@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card/Card";
-import Header from "../components/Header/Header";
+
 import Carousel from "react-elastic-carousel";
 
 import './Carteirinha.css'
 import CardDep from "../components/Card/Card-Dep";
 import Verso from "../components/Card/Verso";
+import Sidebar from "../components/SideBar/SideBar";
 
 export function Carteirinha() {
     const [data, setData] = useState();
@@ -31,21 +32,20 @@ export function Carteirinha() {
     }, [])
     return(
         <>
-        <Header/>
+        <Sidebar/>
+        <div className="carteirinha-div">
         <div className="carrossel">
        <Carousel>
         {data?.map((titular) =>
-        <item><Card Plano={titular.PLA_NOME} Titular={titular.CLI_NOME} Matricula={titular.CLI_MATRICULA}/></item>
+        <item className="item-carteirinha"><Card Plano={titular.PLA_NOME} Titular={titular.CLI_NOME} Matricula={titular.CLI_MATRICULA}/></item>
         )}
-        <item><Verso /></item>
+        <item className="item-carteirinha"><Verso /></item>
         {dep?.map((dependente) =>  
-        <item><CardDep Plano={plano} NomeDep={dependente.DEPC_NOME} matriculaDep={dependente.DEPC_CODIGO_ID} /></item>
+        <item className="item-carteirinha"><CardDep Plano={plano} NomeDep={dependente.DEPC_NOME} matriculaDep={dependente.DEPC_CODIGO_ID} /></item>
         )}
        </Carousel>
        </div>
-      
-        
-        
+       </div>
         </>
     )
 }

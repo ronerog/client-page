@@ -1,12 +1,12 @@
-item {
+.item-carteirinha {
     padding: 20px;
 }
 
+
 .carrossel { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 650px;
-    padding-top: 150px;
-    margin: 0 auto;
+    max-width: 1000px ;
+    max-height: 75%;
+    margin-top: 300px;
+    margin-left: 350px;
+    margin-bottom: 350px;
 }

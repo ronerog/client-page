@@ -17,7 +17,7 @@ export default function CustomTable({ data }) {
   const keys = Object.keys(data[0]);
 
   return (
-    <TableContainer className="TableContainer">
+        <TableContainer className="TableContainer">
       <Table>
         <TableHead>
           <TableRow>

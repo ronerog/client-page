@@ -1,7 +1,6 @@
 import React from 'react'
-import { Container, Content } from './SiderBar-css'
+
 import { 
-  FaTimes, 
   FaRegSun, 
   FaUserAlt, 
   FaHome,
@@ -13,40 +12,54 @@ import { GiExitDoor } from "react-icons/gi";
 
 import SidebarItem from '../SidebarItem/SideBarItem'
 import { Link } from 'react-router-dom';
+import "./style-side.css";
 
-const Sidebar = ({ active }) => {
-
-  const closeSidebar = () => {
-    active(false)
-  }
+export default function Sidebar() {
 
   return (
     <>
-    <Container sidebar={active}>
-      <FaTimes onClick={closeSidebar} />  
-      <Content>
-      <Link to="/homepage">
-      <SidebarItem Icon={FaHome} Text="Início" />
+    
+    
+      <div className="container-side">
+      <header>
+      
+      </header>
+      <div className='navigation-side'>
+        
+        <ul>
+        <li>
+        <Link className='link' to="/homepage">
+        <SidebarItem className='icon' Icon={FaHome} Text="Início" />
+        </Link>
+        </li>
+        <li>
+        <Link className='link' to="/user">
+        <SidebarItem className='icon' Icon={FaUserAlt} Text="Usuário" />
+        </Link>
+        </li>
+        <li>
+        <Link className='link' to="/boletos">
+        <SidebarItem className='icon' Icon={FaWallet} Text="Boletos" />
+        </Link>
+        </li>
+        <li>
+        <Link className='link' to="/carteirinha">
+        <SidebarItem className='icon' Icon={FaAddressCard} Text="Carteirinha" />
+        </Link>
+        </li>
+        <li>
+        <Link className='link' to="/config">
+        <SidebarItem className='icon' Icon={FaRegSun} Text="Settings" />
+        </Link>
+        </li>
+        <li>
+      <Link className='link' to="/">
+      <SidebarItem className='icon' Icon={GiExitDoor} Text="Sair" />
       </Link>
-        <Link to="/user">
-        <SidebarItem Icon={FaUserAlt} Text="Usuário" />
-        </Link>
-        <Link to="/boletos">
-        <SidebarItem Icon={FaWallet} Text="Boletos" />
-        </Link>
-        <Link to="/carteirinha">
-        <SidebarItem Icon={FaAddressCard} Text="Carteirinha" />
-        </Link>
-        <Link to="/config">
-        <SidebarItem Icon={FaRegSun} Text="Settings" />
-        </Link>
-      </Content>
-      <Link to="/">
-      <SidebarItem className="logout" Icon={GiExitDoor} Text="Sair" />
-      </Link>
-    </Container>
+      </li>
+      </ul>
+      </div>
+      </div>
     </>
   )
 }
-
-export default Sidebar
