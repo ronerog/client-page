@@ -8,7 +8,7 @@ export default function CardDep({NomeDep, Plano, matriculaDep}) {
 
     return (
         <>
-            <div className="card edit card__visa">
+            <div className="cardClient edit card__visa">
                 <div className="flag">
                     <span className="flag__image visa"></span>
                 </div>

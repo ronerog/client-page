@@ -6,7 +6,7 @@ export default function Card({Plano, Titular, Matricula}) {
 
     return (
         <>
-            <div className="card edit card__master">
+            <div className="cardClient edit card__master">
                 <div className="flag">
                     <span className="flag__image master"></span>
                 </div>

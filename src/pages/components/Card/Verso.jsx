@@ -19,7 +19,7 @@ export default function Verso() {
 
     return (
         <>
-            <div className="card edit card__master">
+            <div className="cardClient edit card__master">
             <span className="text-verso">Dependentes</span>
                 <div className="flag">
                     <span className="flag__image master"></span>
