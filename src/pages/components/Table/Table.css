@@ -1,8 +1,8 @@
 
 .TableContainer {
     max-width: 1000px ;
-    max-height: 75%;
+    max-height: 100vh;
     margin-top: 300px;
-    margin-left: 350px;
+    margin-left: 150px;
     margin-bottom: 350px;
   }

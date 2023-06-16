@@ -2,11 +2,10 @@
     padding: 20px;
 }
 
-
 .carrossel { 
-    max-width: 1000px ;
-    max-height: 75%;
+    max-width: 800px ;
+    max-height: 50%;
     margin-top: 300px;
-    margin-left: 350px;
+    margin-left: 150px;
     margin-bottom: 350px;
 }

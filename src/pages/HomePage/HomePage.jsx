@@ -7,7 +7,8 @@ export function HomePage() {
     
     return (
       <>
-            <Sidebar></Sidebar>
+            <Sidebar />
+            <div className="homepage-div"></div>
       </>
       );
 }

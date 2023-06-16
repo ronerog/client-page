@@ -7,6 +7,7 @@ export function Config() {
     return (
         <>
         <Sidebar />
+        <div className="homepage-div"></div>
         </>
     )
 }

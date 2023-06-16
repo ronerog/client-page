@@ -20,12 +20,7 @@ export default function Sidebar() {
     <>
     
     
-      <div className="container-side">
-      <header>
-      
-      </header>
-      <div className='navigation-side'>
-        
+        <div className='navigation-side'>
         <ul>
         <li>
         <Link className='link' to="/homepage">
@@ -58,7 +53,6 @@ export default function Sidebar() {
       </Link>
       </li>
       </ul>
-      </div>
       </div>
     </>
   )

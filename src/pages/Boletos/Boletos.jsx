@@ -30,7 +30,7 @@ export function Boletos() {
     return (
         <>
         <Sidebar />
-                <div>
+                <div className="homepage-div">
                         <Table data={DATA1} />
                 </div>
         </>

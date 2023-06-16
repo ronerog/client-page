@@ -25,7 +25,7 @@ export function User() {
     <>
     
       <Sidebar/>
-      
+      <div className="homepage-div">
       <div className='div-form'>
       <div className="user-form">
         <Typography variant="body1">
@@ -57,6 +57,7 @@ export function User() {
           <Typography variant="body1">
           Estado: {data?.CID_UF}
           </Typography>
+        </div>
         </div>
         </div>
     </>

@@ -1,7 +1,16 @@
 body {
-  background-color: #fff;
+  background-color: black;
 }
 
+.homepage-div {
+  position: fixed;
+  border-top-left-radius: 30px;
+  width: 79vw;
+  height: 100vh;
+  min-height: 100vh;
+  margin-left: 300px;
+  background-color: #fff;
+}
 .container {
   width: 100vw;
   height: 100vh;
