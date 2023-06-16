@@ -32,8 +32,8 @@ export function Carteirinha() {
     }, [])
     return(
         <>
-        <Sidebar/>
-        <div className="homepage-div">
+
+        <div className="page-conteudo">
         <div className="carrossel">
        <Carousel>
         {data?.map((titular) =>

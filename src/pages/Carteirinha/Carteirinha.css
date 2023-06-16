@@ -3,9 +3,5 @@
 }
 
 .carrossel { 
-    max-width: 800px ;
-    max-height: 50%;
-    margin-top: 300px;
-    margin-left: 150px;
-    margin-bottom: 350px;
+    width: 100% ;
 }

@@ -6,8 +6,8 @@ import './Config.css'
 export function Config() {
     return (
         <>
-        <Sidebar />
-        <div className="homepage-div"></div>
+
+        <div className="page-conteudo">CONFIGURAÇÕES</div>
         </>
     )
 }

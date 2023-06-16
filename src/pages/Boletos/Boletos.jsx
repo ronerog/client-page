@@ -29,10 +29,8 @@ export function Boletos() {
     ]
     return (
         <>
-        <Sidebar />
-                <div className="homepage-div">
-                        <Table data={DATA1} />
-                </div>
+           
+            <div className="page-conteudo"><Table data={DATA1} /></div>
         </>
     )
 }

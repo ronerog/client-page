@@ -7,8 +7,8 @@ export function HomePage() {
     
     return (
       <>
-            <Sidebar />
-            <div className="homepage-div"></div>
+
+            <div className="page-conteudo">INICIO</div>
       </>
       );
 }

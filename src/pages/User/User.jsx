@@ -24,8 +24,8 @@ export function User() {
   return (
     <>
     
-      <Sidebar/>
-      <div className="homepage-div">
+  
+      <div className="page-conteudo">
       <div className='div-form'>
       <div className="user-form">
         <Typography variant="body1">
