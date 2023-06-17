@@ -6,19 +6,19 @@ import './Config.css'
 
 export function Config() {
 
-    const [cor, setValor] = useState('');
+    const [cor, setValor] = useState('#000');
 
     const pegarCor = (event) => {
         setValor(event.target.value);
         document.querySelector('body').style.backgroundColor = cor
         console.log(cor)
-    };    
+    }; 
 
     
     return (
         <>
         <div className="page-conteudo"> 
-            <h>CONFIGURAÇÕES</h>
+            <h1>CONFIGURAÇÕES</h1>
             <div>
             <input type="color" id="cor" name="cor" value={cor} onChange={pegarCor} />
             

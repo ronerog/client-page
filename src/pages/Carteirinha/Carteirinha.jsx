@@ -38,11 +38,11 @@ export function Carteirinha() {
         <div className="carrossel">
        <Carousel>
         {data?.map((titular) =>
-        <item className="item-carteirinha"><Card Plano={titular.PLA_NOME} Titular={titular.CLI_NOME} Matricula={titular.CLI_MATRICULA}/></item>
+        <item key={titular.CLI_MATRICULA} className="item-carteirinha"><Card Plano={titular.PLA_NOME} Titular={titular.CLI_NOME} Matricula={titular.CLI_MATRICULA}/></item>
         )}
         <item className="item-carteirinha"><Verso /></item>
         {dep?.map((dependente) =>  
-        <item className="item-carteirinha"><CardDep Plano={plano} NomeDep={dependente.DEPC_NOME} matriculaDep={dependente.DEPC_CODIGO_ID} /></item>
+        <item key={dependente.DEPC_CODIGO_ID} className="item-carteirinha"><CardDep Plano={plano} NomeDep={dependente.DEPC_NOME} matriculaDep={dependente.DEPC_CODIGO_ID} /></item>
         )}
        </Carousel>
        </div>
