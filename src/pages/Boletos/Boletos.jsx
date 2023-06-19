@@ -1,36 +1,55 @@
 
-import Sidebar from "../components/SideBar/SideBar"
+import React, { useState, useEffect } from "react";
 import Table from "../components/Table/Table"
 import './Boletos.css'
 
 
 export function Boletos() {
 
+    const [abertos, setAbertos] = useState();
+    const [pagos, setPagos] = useState();
+    const [acordos, setAcordos] = useState();
+    const [vencidos, setVencidos] = useState();
 
+    useEffect(() => {
+        async function fetchData() {
+          const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_web_teste&MAT=11000');
+          const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_web_teste&MAT=11000');
+          const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_web_teste&MAT=11000');
+          const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_web_teste&MAT=11000');
+      
+          const [abertosResponse, pagosResponse, acordosResponse, vencidosResponse] = await Promise.all([abertosRequest, pagosRequest, acordosRequest, vencidosRequest]);
+          
+          const abertosResult = await abertosResponse.json();
+          const pagosResult = await pagosResponse.json();
+          const acordosResult = await acordosResponse.json();
+          const vencidosResult = await vencidosResponse.json();
+      
+          setAbertos(abertosResult);
+          setPagos(pagosResult);
+          setAcordos(acordosResult);
+          setVencidos(vencidosResult);
+        }
+      
+        fetchData();
+      }, []);
 
-    const DATA1 = [
-        {Situação: 'Pago', Vencimento: '01/01/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '1'},
-        {Situação: 'Pago', Vencimento: '01/02/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '2'},
-        {Situação: 'Pago', Vencimento: '01/03/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '3'},
-        {Situação: 'Pago', Vencimento: '01/04/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '4'},
-        {Situação: 'Pago', Vencimento: '01/05/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '5'},
-        {Situação: 'Pago', Vencimento: '01/06/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '6'},
-        {Situação: 'Pago', Vencimento: '01/07/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '7'},
-        {Situação: 'Pago', Vencimento: '01/08/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '8'},
-        {Situação: 'Pago', Vencimento: '01/09/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '9'},
-        {Situação: 'Pago', Vencimento: '01/10/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '10'},
-        {Situação: 'Pago', Vencimento: '01/11/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '11'},
-        {Situação: 'Pago', Vencimento: '01/12/2023', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '13'},
-        {Situação: 'Vencido', Vencimento: '01/01/2024', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '14'},
-        {Situação: 'A vencer', Vencimento: '01/02/2024', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '15'},
-        {Situação: 'A vencer', Vencimento: '01/03/2024', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '16'},
-        {Situação: 'A vencer', Vencimento: '01/04/2024', Valor: 'R$ 16,00', Pago: '16,00', Parcela: '17'},
-
+    //"CAR_VALOR_PARCELA": 28,
+    //"CAR_SITUACAO": 0,
+    //"CAR_MES": 2,
+    //"CAR_ANO": 2024,
+    //"CAR_CODIGO_BARRAS": "10493963700000028002736195000100040000331964",
+    //"CAR_DT_VENCIMENTO": "Mon Mar 25 2024 00:00:00 GMT-0300 (Brasilia Standard Time)",
+    //COLOCAR BOTÃO DE IMPRIMIR, VER COMO COLOCAR EM PDF O BOLETO
+    // COLOCAR FILTRO POR DATA DE VENCIMENTO E POR BOLETO PAGO, ABERTO, VENCIDO, ACORDO E TODOS ORDENADO POR DATA DE VENCIMENTO
+    const data = [
+        {mensalidade: '1'}
     ]
+
     return (
         <>
-           
-            <div className="page-conteudo"><Table data={DATA1} /></div>
+            
+            <div className="page-conteudo"><Table data={abertos} /></div>
         </>
     )
 }

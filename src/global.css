@@ -51,8 +51,8 @@ html, body {
 .navigation-side ul li {
 width: 100%;
 list-style: none;
-border-top-left-radius: 30px;
-border-bottom-left-radius: 30px;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
 }
 
 .navigation-side ul li:hover{
