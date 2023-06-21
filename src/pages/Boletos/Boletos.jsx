@@ -49,7 +49,7 @@ export function Boletos() {
     return (
         <>
             
-            <div className="page-conteudo"><Table data={abertos} /></div>
+            <div className="page-conteudo">{abertos && <Table data={abertos} />}</div>
         </>
     )
 }

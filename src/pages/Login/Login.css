@@ -21,11 +21,14 @@ body, html {
     padding: 30px;
     color:#FFF;
     display: none;
-    text-shadow: 2px 2px #000;
+    text-shadow: 2px 2px #FFF;
 }
 
 .Login {
-    width: 40vw;
+    animation-duration: 1s !important;
+    animation-fill-mode: both!important;
+    animation-name: fadeIn !important;
+    width: 50vw;
     min-height: 100vh;
     padding: 30px;
     background-color: #FFF;
@@ -35,15 +38,40 @@ body, html {
     right: 0;
 }
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(50vw);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeOn {
+	0% {
+		opacity: 0;
+		transform: translateY(100vw);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @media screen and (max-width: 992px) {
     
     .Login {
-      width: 100vw !important;
-      margin:0 auto;
+        animation-duration: 1s !important;
+        animation-fill-mode: both!important;
+        animation-name: fadeOn !important;
+        width: 100vw !important;
+        margin:0 auto;
 
-      position: static;
-      margin-top:30px;
-      border-radius:30px;
+        position: static;
+        margin-top:30px;
+        border-radius:30px;
     }
 
     .txtLogin {
