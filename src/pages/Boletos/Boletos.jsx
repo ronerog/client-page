@@ -10,6 +10,7 @@ export function Boletos() {
     const [pagos, setPagos] = useState();
     const [acordos, setAcordos] = useState();
     const [vencidos, setVencidos] = useState();
+    const [filtroMes, setFiltroMes] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -34,6 +35,23 @@ export function Boletos() {
         fetchData();
       }, []);
 
+      const handleFiltroMesChange = (event) => {
+        const novoFiltroMes = event.target.value;
+        setFiltroMes(novoFiltroMes);
+      };
+
+      const handleRenderMonth = () => {
+        if (filtroMes === '') {
+        return pagos;
+        } else {
+        const mes = pagos && pagos.filter((boleto) => boleto.CAR_MES === filtroMes)
+        console.log(mes);
+        return mes;
+        }
+      }
+
+    //  TODOS QUE TIVEREM O novoFiltroMes === renderizem
+
     //"CAR_VALOR_PARCELA": 28,
     //"CAR_SITUACAO": 0,
     //"CAR_MES": 2,
@@ -48,8 +66,26 @@ export function Boletos() {
 
     return (
         <>
-            
-            <div className="page-conteudo">{abertos && <Table data={abertos} />}</div>
+            <div className="page-conteudo">
+            <div>
+                <label htmlFor="filtroMes">Filtrar por mês: </label>
+                <select id="filtroMes" value={filtroMes} onChange={handleFiltroMesChange}>
+                <option value="">Todos</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+                </select>
+            </div>
+                
+                {abertos && <Table data={() => {handleRenderMonth}} />}</div>
         </>
     )
 }

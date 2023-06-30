@@ -1,0 +1,6 @@
+.div-boletos {
+    margin-top: 70px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
