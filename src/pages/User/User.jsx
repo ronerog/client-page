@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import Box from '@mui/material/Box';
 import { Typography, TextField, Button } from "@mui/material";
 // import Header from "../components/Header/Header";
 import "./User.css";
-import Sidebar from '../components/SideBar/SideBar';
 
 
 export function User() {
@@ -28,35 +28,72 @@ export function User() {
       <div className="page-conteudo">
       <div className='div-form'>
       <div className="user-form">
-        <Typography variant="body1">
-          Nome: {data?.CLI_NOME}
-        </Typography>
         
-        <Typography variant="body1">
-          Email: {data?.CLI_EMAIL}
-        </Typography>
-        
-        <Typography variant="body1">
-          Celular: {data?.CLI_FONE1}
-        </Typography>
-        
+    <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 2, width: '50ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <div>
+        <TextField
+          disabled
+          id="outlined-disabled"
+          label="Nome"
+          defaultValue={data?.CLI_NOME}
+        />
 
-        <Typography variant="body1">
-          Plano: {data?.PLA_NOME}
-        </Typography>
+        <TextField
+          disabled
+          id="outlined-disabled"
+          label="E-mail"
+          defaultValue={data?.CLI_EMAIL}
+        />
 
-        <Typography variant="body1">
-          Endereço: {data?.CLI_ENDERECO}
-          </Typography>
-          <Typography variant="body1">
-          Bairro: {data?.CLI_BAIRRO}
-          </Typography>
-          <Typography variant="body1">
-          Cidade: {data?.CID_NOME}
-          </Typography>
-          <Typography variant="body1">
-          Estado: {data?.CID_UF}
-          </Typography>
+        <TextField
+          disabled
+          id="outlined-disabled"
+          label="Celular"
+          defaultValue={data?.CLI_FONE1}
+        />
+
+        <TextField
+          disabled
+          id="outlined-disabled"
+          label="Plano"
+          defaultValue={data?.PLA_NOME}
+        />
+      </div>
+      
+      <TextField
+          disabled
+          id="outlined-disabled"
+          label="Endereço"
+          defaultValue={data?.CLI_ENDERECO}
+        />
+      
+      <TextField
+          disabled
+          id="outlined-disabled"
+          label="Bairro"
+          defaultValue={data?.CLI_BAIRRO}
+        />
+         <TextField
+          disabled
+          id="outlined-disabled"
+          label="Cidade"
+          defaultValue={data?.CID_NOME}
+        />
+          <TextField
+          disabled
+          id="outlined-disabled"
+          label="Estado"
+          defaultValue={data?.CID_UF}
+        />
+    </Box>
+
         </div>
         </div>
         </div>
