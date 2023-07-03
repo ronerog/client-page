@@ -39,8 +39,8 @@ export function Login() {
       </div>
 
  
-        <div className="button-entrar" >
-          <Link to="/homepage" className="button1">Entrar</Link>
+        <div className="text-center">
+          <Link to="/homepage" className="btn btn-dark">Entrar</Link>
         </div>
 
     </div>    
