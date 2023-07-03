@@ -7,7 +7,7 @@ const Row = ({ record }) => {
   return (
     <TableRow>
       {keys.map((key) => (
-        <TableCell key={key}>{record[key]}</TableCell>
+        <TableCell className="table-cell" key={key}>{record[key]}</TableCell>
       ))}
     </TableRow>
   );
@@ -22,7 +22,7 @@ export default function CustomTable({ data }) {
         <TableHead>
           <TableRow>
             {keys.map((key) => (
-              <TableCell key={key}>{key}</TableCell>
+              <TableCell className="table-cell" key={key}>{key}</TableCell>
             ))}
           </TableRow>
         </TableHead>

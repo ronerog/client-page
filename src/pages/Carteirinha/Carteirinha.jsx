@@ -35,6 +35,11 @@ export function Carteirinha() {
         <>
 
         <div className="page-conteudo">
+        <div className="form-header">
+      <h2>Carteirinha do usuário</h2>
+      <p>* Caso os dados necessitem ser atualizados,
+      entrem em contato com a empresa funerária responsável</p>
+        </div>
         <div className="carrossel">
        <Carousel>
         {data?.map((titular) =>

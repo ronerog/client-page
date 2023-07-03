@@ -61,16 +61,30 @@ export function Boletos() {
     //COLOCAR BOTÃO DE IMPRIMIR, VER COMO COLOCAR EM PDF O BOLETO
     // COLOCAR FILTRO POR DATA DE VENCIMENTO E POR BOLETO PAGO, ABERTO, VENCIDO, ACORDO E TODOS ORDENADO POR DATA DE VENCIMENTO
     const data = [
-        {mensalidade: '1'}
+        {Mês: '1', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '2', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '3', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '4', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '5', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '6', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '7', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '8', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '9', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+        {Mês: '10', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"}
     ]
 
     return (
         <>
             <div className="page-conteudo">
-            <div>
-                <label htmlFor="filtroMes">Filtrar por mês: </label>
+            <div className="form-header">
+            <h2>Boletos</h2>
+            <p>* Os serviços são pagos de acordo com o estado atual da moeda e tarifa.</p>
+            </div>
+            <div className="filtro">
+                <label htmlFor="filtroMes">Filtrar por mês:</label>
                 <select id="filtroMes" value={filtroMes} onChange={handleFiltroMesChange}>
                 <option value="">Todos</option>
+                <option value="1">Janeiro</option>
                 <option value="2">Fevereiro</option>
                 <option value="3">Março</option>
                 <option value="4">Abril</option>
@@ -84,8 +98,11 @@ export function Boletos() {
                 <option value="12">Dezembro</option>
                 </select>
             </div>
+                <div className="tabela">
+                {<Table data={data} />}
+                </div>
                 
-                {abertos && <Table data={() => {handleRenderMonth}} />}</div>
+                </div>
         </>
     )
 }

@@ -7,5 +7,9 @@
 .user-form {
 	flex-wrap: wrap;
 	flex-flow: column;
-	border: 1px solid red;
+	margin-top: 25px;
+}
+
+.form-header {
+	margin-left: 15px;
 }

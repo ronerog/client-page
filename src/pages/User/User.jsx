@@ -30,14 +30,16 @@ export function User() {
     
   
       <div className="page-conteudo">
-      <div className='user-form'>
-    
-    
-		<div className="app-header-actions">
-      <span><FaUserAlt /></span>
-      <h1>xxxxXXXxxxx.com</h1>
-    </div>
       
+    
+    
+		<div className="form-header">
+      <h2>Dados do usuário</h2>
+      <span>* Caso os dados necessitem ser atualizados,
+      entrem em contato com a empresa funerária responsável</span>
+    </div>
+
+    <div className='user-form'>
     <Box
       component="form"
       sx={{
@@ -52,7 +54,7 @@ export function User() {
           disabled
           id="outlined-disabled"
           label="Nome"
-          defaultValue={data?.CLI_NOME}
+          
         />
 
         <TextField
@@ -60,7 +62,7 @@ export function User() {
           disabled
           id="outlined-disabled"
           label="E-mail"
-          defaultValue={data?.CLI_EMAIL}
+          // defaultValue={data?.CLI_EMAIL}
         />
 
         <TextField
@@ -68,7 +70,7 @@ export function User() {
           disabled
           id="outlined-disabled"
           label="Celular"
-          defaultValue={data?.CLI_FONE1}
+          // defaultValue={data?.CLI_FONE1}
         />
 
         <TextField
@@ -76,7 +78,7 @@ export function User() {
           disabled
           id="outlined-disabled"
           label="Plano"
-          defaultValue={data?.PLA_NOME}
+          // defaultValue={data?.PLA_NOME}
         />
       </div>
       
@@ -85,7 +87,7 @@ export function User() {
           disabled
           id="outlined-disabled"
           label="Endereço"
-          defaultValue={data?.CLI_ENDERECO}
+          // defaultValue={data?.CLI_ENDERECO}
         />
       
       <TextField
@@ -93,21 +95,21 @@ export function User() {
           disabled
           id="outlined-disabled"
           label="Bairro"
-          defaultValue={data?.CLI_BAIRRO}
+          // defaultValue={data?.CLI_BAIRRO}
         />
          <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
           label="Cidade"
-          defaultValue={data?.CID_NOME}
+          // defaultValue={data?.CID_NOME}
         />
           <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
           label="Estado"
-          defaultValue={data?.CID_UF}
+          // defaultValue={data?.CID_UF}
         />
     </Box>
     </div> 
