@@ -11,8 +11,8 @@
 	--c-gray-200: #f1f1f1;
 	--c-gray-100: #ffffff;
 
-	--c-green-500: #45ffbc;
-	--c-olive-500: #e3ffa8;
+	--c-green-500: #72ae95;
+	--c-olive-500: #f1c972;
 
 	--c-white: var(--c-gray-100);
 
@@ -151,7 +151,7 @@ a {
 		}
 	}
 	&:nth-child(3) {
-		background-color: var(--c-gray-300);
+		background-color: #f5886b;
 		&:focus-within {
 			box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
 		}
