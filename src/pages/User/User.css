@@ -1,53 +1,12 @@
-.form-user {
-    border-radius: 30px;
-    padding: 18px 1px 10px 15px;
-    width: 28vw;
-    margin-left: 30%;
-    margin-top: 50px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px #5e5d5d7a,
-               -10px -10px 20px #1f1f1f;
+.input-user {
+	background: white;
+	border-radius: 10px;
+	width: '95ch';
+	height: '4ch';
 }
 
-body {
-	
-	background-color: var(--c-gray-900);
-	color: var(--c-text-primary);
+.user-form {
+	flex-wrap: wrap;
+	flex-flow: column;
+	border: 1px solid red;
 }
-
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
-
-select,
-input,
-textarea {
-	font: inherit;
-}
-
-a {
-	color: inherit;
-}
-
-.responsive-wrapper {
-	width: 90%;
-	max-width: 1600px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.app {
-	min-height: 80vh;
-    border-radius: 30px;
-	width: 95%;
-	max-width: 1600px;
-	background-color: var(--c-gray-800);
-	padding: 2vw 4vw 6vw;
-	display: flex;
-	flex-direction: column;
-}
-

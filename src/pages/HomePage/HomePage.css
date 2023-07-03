@@ -22,8 +22,6 @@
 }
 
 body {
-	
-	background-color: var(--c-gray-900);
 	color: var(--c-text-primary);
 }
 
@@ -53,7 +51,6 @@ a {
 
 .app {
 	min-height: 80vh;
-	background-color: var(--c-gray-800);
 	display: flex;
 	flex-direction: column;
 }
@@ -76,6 +73,7 @@ a {
 
 .app-header-actions {
 	display: flex;
+	margin-top: 20px;
 }
 
 .app-header-actions span {
@@ -131,6 +129,7 @@ a {
 	background-color: var(--c-olive-500);
 	color: var(--c-gray-900);
 	min-height: 200px;
+	min-width: 200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

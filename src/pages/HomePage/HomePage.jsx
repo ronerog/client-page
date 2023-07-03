@@ -32,10 +32,8 @@ export function HomePage() {
 				<div className="tiles">
 					<article className="tile">
 						<div className="tile-header">
-							<i className="ph-lightning-light"></i>
 							<h3>
-                <span>Boletos em aberto</span>
-								<span>Boletos em aberto</span>
+								<span>Boletos em Aberto</span>
 							</h3>
 						</div>
 						<a href="#">
@@ -44,9 +42,7 @@ export function HomePage() {
 					</article>
 					<article className="tile">
 						<div className="tile-header">
-							<i className="ph-fire-simple-light"></i>
 							<h3>
-								<span>Boletos Pagos</span>
 								<span>Boletos Pagos</span>
 							</h3>
 						</div>
@@ -57,9 +53,7 @@ export function HomePage() {
 					</article>
 					<article className="tile">
 						<div className="tile-header">
-							<i className="ph-file-light"></i>
 							<h3>
-								<span>Boletos Vencidos</span>
 								<span>Boletos Vencidos</span>
 							</h3>
 						</div>

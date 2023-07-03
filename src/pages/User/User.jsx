@@ -27,8 +27,8 @@ export function User() {
   
       <div className="page-conteudo">
       <div className='div-form'>
-      <div className="app">
-    <div className="form-user">
+      <div className='user-form'>
+    
       
     <Box
       component="form"
@@ -40,6 +40,7 @@ export function User() {
     >
       <div>
         <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="Nome"
@@ -47,6 +48,7 @@ export function User() {
         />
 
         <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="E-mail"
@@ -54,6 +56,7 @@ export function User() {
         />
 
         <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="Celular"
@@ -61,6 +64,7 @@ export function User() {
         />
 
         <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="Plano"
@@ -69,6 +73,7 @@ export function User() {
       </div>
       
       <TextField
+        className="input-user"
           disabled
           id="outlined-disabled"
           label="Endereço"
@@ -76,18 +81,21 @@ export function User() {
         />
       
       <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="Bairro"
           defaultValue={data?.CLI_BAIRRO}
         />
          <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="Cidade"
           defaultValue={data?.CID_NOME}
         />
           <TextField
+          className="input-user"
           disabled
           id="outlined-disabled"
           label="Estado"
@@ -97,7 +105,7 @@ export function User() {
     </div> 
         </div>
         </div>
-        </div>
+       
     </>
   );
 }
