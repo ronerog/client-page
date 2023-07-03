@@ -111,6 +111,10 @@ border-bottom-left-radius: 15px;
 
 }
 
+.app-header-actions span {
+  font-size:20px;
+}
+
 @media screen and (max-width: 992px) {
   
   .navigation-side {
@@ -167,6 +171,7 @@ border-bottom-left-radius: 15px;
   }
 
   .page-conteudo {
+    padding: 20px;
     border-top-left-radius: 0 !important;
     width: 100%;
     border: 0px solid #FFF;

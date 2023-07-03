@@ -1,11 +1,11 @@
 .input-user {
 	background: white;
 	border-radius: 10px;
-	width: '95ch';
-	height: '4ch';
+	width: 100%;
 }
 
 .user-form {
 	flex-wrap: wrap;
 	flex-flow: column;
+	border: 1px solid red;
 }
