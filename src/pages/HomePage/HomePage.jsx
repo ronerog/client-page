@@ -1,18 +1,22 @@
 import React from 'react';
 import "./HomePage.css";
 
+import { 
+	FaUserAlt,
+	FaLock,
+  } from 'react-icons/fa'
+
 export function HomePage() {
     
     return (
       <>
       <div className="page-conteudo">
 
-      <div className="app">
 
 		<div className="app-header-actions">
 
-				<h1>Olá, Flávio Pereira!</h1>
-				
+			<span><FaUserAlt /></span>
+			<h1>Olá, Flávio Pereira!</h1>			
 		
 		</div>
 
@@ -138,7 +142,7 @@ export function HomePage() {
 			</section>
 		</div>
 	</div>
-</div>
+
 </div>
       </>
       );
