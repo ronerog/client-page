@@ -4,6 +4,10 @@ import { Typography, TextField, Button } from "@mui/material";
 // import Header from "../components/Header/Header";
 import "./User.css";
 
+import { 
+	FaUserAlt,
+	FaLock,
+  } from 'react-icons/fa'
 
 export function User() {
 
@@ -26,14 +30,18 @@ export function User() {
     
   
       <div className="page-conteudo">
-      <div className='div-form'>
       <div className='user-form'>
     
+    
+		<div className="app-header-actions">
+      <span><FaUserAlt /></span>
+      <h1>xxxxXXXxxxx.com</h1>
+    </div>
       
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 2, width: '50ch' },
+        '& .MuiTextField-root': { m: 2, maxWidth: 350 },
       }}
       noValidate
       autoComplete="off"
@@ -104,8 +112,7 @@ export function User() {
     </Box>
     </div> 
         </div>
-        </div>
-       
+        
     </>
   );
 }
