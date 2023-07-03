@@ -23,6 +23,7 @@ html, body {
   min-height: 100vh;
   border: 10px solid #FFF;
   border-bottom: 0 !important;
+  border-right: 0 !important;
   border-top-left-radius: 30px;
   background-color: var(--c-gray-800);
   padding: 10px;
