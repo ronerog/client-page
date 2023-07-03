@@ -1,18 +1,3 @@
-body, html {
-    /* background-color: transparent !important; */
-}
-
-
-
-
- body {
-    /* background-color: transparent !important;
-    background-image: url('https://media.istockphoto.com/id/490989354/pt/foto/olhos-de-tigre.jpg?s=1024x1024&w=is&k=20&c=RZLUhhYeMcbXptHXOfotF1HdH6iAvwLUXomqu2IA3V4=');
-    background-size:cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-attachment:fixed; */
-} 
 
 .txtLoginResponsive {
     width: 80vw !important;
@@ -37,6 +22,38 @@ body, html {
     position: fixed;
     right: 0;
 }
+
+.txtLogin {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 200px;
+    color: rgb(0, 0, 0);
+}
+
+.button-entrar {
+    margin-top: 60px;
+}
+
+.button1 {
+    margin-top: 20px;
+    margin-left: 45vh;
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+  }
+
+  .button1:hover {
+    background-color: black;
+    color: white;
+  }
+
 
 @keyframes fadeIn {
 	0% {

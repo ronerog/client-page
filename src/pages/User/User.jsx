@@ -27,8 +27,9 @@ export function User() {
   
       <div className="page-conteudo">
       <div className='div-form'>
-      <div className="user-form">
-        
+      <div className="app">
+    <div className="form-user">
+      
     <Box
       component="form"
       sx={{
@@ -93,7 +94,7 @@ export function User() {
           defaultValue={data?.CID_UF}
         />
     </Box>
-
+    </div> 
         </div>
         </div>
         </div>

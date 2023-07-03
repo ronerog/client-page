@@ -48,11 +48,11 @@ export default function Sidebar() {
         <SidebarItem className='icon' Icon={FaAddressCard} Text="Carteirinha" />
         </Link>
         </li>
-        <li>
+        {/* <li>
         <Link className='link' to="/config">
         <SidebarItem className='icon' Icon={FaRegSun} Text="Settings" />
         </Link>
-        </li>
+        </li> */}
         <li>
       <Link className='link' to="/">
       <SidebarItem className='icon' Icon={GiExitDoor} Text="Sair" />
