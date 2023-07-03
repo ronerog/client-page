@@ -187,11 +187,4 @@ border-bottom-left-radius: 15px;
 
 }
 
-@media screen and (max-width: 670px) {
-  .carrossel { 
-    margin-top:240px;
-    width: 570px !important;
-    height: 100px !important;
-    transform: rotate(90deg) !important;
-  }
-}
+

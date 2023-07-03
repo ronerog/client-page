@@ -36,20 +36,20 @@ export function Carteirinha() {
 
         <div className="page-conteudo">
         <div className="form-header">
-      <h2>Carteirinha do usuário</h2>
-      <p>* Caso os dados necessitem ser atualizados,
-      entrem em contato com a empresa funerária responsável</p>
+            <h2>Carteirinha do usuário</h2>
+            <p>* Caso os dados necessitem ser atualizados, entrem em contato com a empresa funerária responsável</p>
         </div>
+
         <div className="carrossel">
-       <Carousel>
-        {data?.map((titular) =>
-        <item key={titular.CLI_MATRICULA} className="item-carteirinha"><Card Plano={titular.PLA_NOME} Titular={titular.CLI_NOME} Matricula={titular.CLI_MATRICULA}/></item>
-        )}
-        <item className="item-carteirinha"><Verso /></item>
-        {dep?.map((dependente) =>  
-        <item key={dependente.DEPC_CODIGO_ID} className="item-carteirinha"><CardDep Plano={plano} NomeDep={dependente.DEPC_NOME} matriculaDep={dependente.DEPC_CODIGO_ID} /></item>
-        )}
-       </Carousel>
+        <Carousel>
+            {data?.map((titular) =>
+            <item key={titular.CLI_MATRICULA} className="item-carteirinha"><Card Plano={titular.PLA_NOME} Titular={titular.CLI_NOME} Matricula={titular.CLI_MATRICULA}/></item>
+            )}
+            <item className="item-carteirinha"><Verso /></item>
+            {dep?.map((dependente) =>  
+            <item key={dependente.DEPC_CODIGO_ID} className="item-carteirinha"><CardDep Plano={plano} NomeDep={dependente.DEPC_NOME} matriculaDep={dependente.DEPC_CODIGO_ID} /></item>
+            )}
+        </Carousel>
        </div>
        </div>
         </>

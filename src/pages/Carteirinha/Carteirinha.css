@@ -2,7 +2,28 @@
     padding: 20px;
 }
 
-.carrossel { 
-    width: 100% ;
-    margin-top: 40px;
+.carrossel {
+    width: 100%;
 }
+
+.form-header {
+    display: block;
+    clear: both;
+    margin: 10px;
+}
+
+@media screen and (max-width: 670px) {
+    .item-carteirinha { 
+      width: 250px !important;
+      height: 490px !important;
+    }
+
+  
+    .cardClient {
+      margin-left:-125px;
+      margin-top: 120px;
+      transform: rotate(90deg) !important;
+    }
+  
+  
+  }
