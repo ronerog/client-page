@@ -1,0 +1,11 @@
+.whatsapp {
+    position: relative;
+    max-height: 35px;
+    margin-top: 150%;
+    margin-left: 47px;
+}
+
+.whatsapp p {
+    margin-top: 20px;
+    margin-left: 65px
+}
