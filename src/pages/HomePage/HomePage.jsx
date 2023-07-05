@@ -85,11 +85,11 @@ export function HomePage() {
 							</div>
 							<div>
 								<dt>25 Mar. 21</dt>
-								<dd>Pagamento</dd>
+								<dd>Pagamento </dd>
 							</div>
 						</dl>
 						<div className="transfer-number">
-							- R$ 550
+							: R$ 550,00
 						</div>
 					</div>
 					<div className="transfer">
@@ -105,11 +105,11 @@ export function HomePage() {
 							</div>
 							<div>
 								<dt>25 Mar. 21</dt>
-								<dd>Pagamento</dd>
+								<dd>Pagamento </dd>
 							</div>
 						</dl>
 						<div className="transfer-number">
-							- R$ 120
+							: R$ 120,00
 						</div>
 					</div>
 					<div className="transfer">
@@ -125,11 +125,10 @@ export function HomePage() {
 							</div>
 							<div>
 								<dt>25 Mar. 21</dt>
-								<dd>Pagamento</dd>
+								<dd>Pagamento </dd>
 							</div>
 						</dl>
-						<div className="transfer-number">
-							- R$ 70
+						<div className="transfer-number"> : R$ 70,00
 						</div>
 					</div>
 				</div>

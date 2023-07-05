@@ -56,7 +56,7 @@ export default function Sidebar() {
       </Link>
       </li>
       </ul>
-      <a className="whatsapp" id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=82996911087"> <img className="whatsapp" src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg"/><p>Fale conosco</p> </a>
+      <a className="whatsapp" id="robbu-whatsapp-button" target="_blank" href="https://api.whatsapp.com/send?phone=82996911087"> <img className="whatsapp" src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg"/></a>
       </div>
     </>
   )
