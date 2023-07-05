@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./HomePage.css";
 
 import { 
@@ -33,33 +34,38 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos em Aberto</span>
+								<span>Boletos em Aberto: 25</span>
 							</h3>
 						</div>
 						<a href="#">
+						<Link className='link' to="/boletos">
 							<span>Visualizar boletos</span>
+							</Link>
 						</a>
 					</article>
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos Pagos</span>
+								<span>Boletos Pagos: 70</span>
 							</h3>
 						</div>
 						<a href="#">
+						<Link className='link' to="/boletos">
 							<span>Visualizar boletos</span>
+							</Link>
 							
 						</a>
 					</article>
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos Vencidos</span>
+								<span>Boletos Vencidos: 3</span>
 							</h3>
 						</div>
 						<a href="#">
+						<Link className='link' to="/boletos">
 							<span>Visualizar boletos</span>
-							
+							</Link>
 						</a>
 					</article>
 				</div>
