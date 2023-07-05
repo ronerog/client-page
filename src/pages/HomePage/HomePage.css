@@ -288,3 +288,8 @@ button {
 		box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
 	}
 }
+
+.number {
+	color: rgb(255, 255, 255);
+	text-shadow: 1.0px 1px 1px #1f1f1f;
+}

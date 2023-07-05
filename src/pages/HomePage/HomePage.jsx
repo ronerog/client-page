@@ -34,7 +34,7 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos em Aberto: 25</span>
+								<span>Boletos em Aberto: <number className="number">9</number></span>
 							</h3>
 						</div>
 						<a href="#">
@@ -46,7 +46,7 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos Pagos: 70</span>
+								<span>Boletos Pagos: <number className="number">70</number></span>
 							</h3>
 						</div>
 						<a href="#">
@@ -59,7 +59,7 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos Vencidos: 3</span>
+								<span>Boletos Vencidos: <number className="number">3</number></span>
 							</h3>
 						</div>
 						<a href="#">
