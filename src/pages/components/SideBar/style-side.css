@@ -1,11 +1,17 @@
 .whatsapp {
     position: fixed;
     max-height: 35px;
-    margin-top: 55px;
-    margin-left: 47px;
+    bottom: 3%;
+    left: 12vh;
 }
 
 .whatsapp p {
     margin-top: 20px;
     margin-left: 65px
+}
+
+@media screen and (max-width: 992px) {
+    .whatsapp {
+        display: none;
+    }
 }

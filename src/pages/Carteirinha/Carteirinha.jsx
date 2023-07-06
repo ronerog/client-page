@@ -16,7 +16,7 @@ export function Carteirinha() {
     useEffect(() => {
 
         async function loadUser(){
-            const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_teste&MAT=11000')
+            const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_teste&MAT=11000')
             const result = await request.json();
             const planos = result?.map((plano) => plano.PLA_NOME)
             setData(result);
