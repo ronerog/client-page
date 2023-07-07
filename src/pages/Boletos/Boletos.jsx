@@ -64,18 +64,18 @@ export function Boletos() {
     //"CAR_DT_VENCIMENTO": "Mon Mar 25 2024 00:00:00 GMT-0300 (Brasilia Standard Time)",
     //COLOCAR BOTÃO DE IMPRIMIR, VER COMO COLOCAR EM PDF O BOLETO
     // COLOCAR FILTRO POR DATA DE VENCIMENTO E POR BOLETO PAGO, ABERTO, VENCIDO, ACORDO E TODOS ORDENADO POR DATA DE VENCIMENTO
-    const data = [
-        {Mês: '1', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '2', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '3', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '4', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '5', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '6', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '7', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '8', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '9', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
-        {Mês: '10', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"}
-    ]
+    // const data = [
+    //     {Mês: '1', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '2', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '3', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '4', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '5', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '6', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '7', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '8', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '9', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"},
+    //     {Mês: '10', Ano: '2023', Situação: 'Pago', Valor: 'R$ 25,00', Vencimento: '25, Mar 2024', Codigo: "10493963700000028002736195000100040000331964"}
+    // ]
 
     return (
         <>
