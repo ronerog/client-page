@@ -4,6 +4,7 @@ import Table from "../components/Table/Table"
 import './Boletos.css'
 
 
+
 export function Boletos() {
 
     const [abertos, setAbertos] = useState();
@@ -14,10 +15,10 @@ export function Boletos() {
 
     useEffect(() => {
         async function fetchData() {
-          const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_web_teste&MAT=11000');
-          const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_web_teste&MAT=11000');
-          const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_web_teste&MAT=11000');
-          const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_web_teste&MAT=11000');
+          const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_teste_api&MAT=11000');
+          const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_teste_api&MAT=11000');
+          const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_teste_api&MAT=11000');
+          const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_teste_api&MAT=11000');
       
           const [abertosResponse, pagosResponse, acordosResponse, vencidosResponse] = await Promise.all([abertosRequest, pagosRequest, acordosRequest, vencidosRequest]);
           
@@ -35,21 +36,24 @@ export function Boletos() {
         fetchData();
       }, []);
 
-      const handleFiltroMesChange = (event) => {
-        const novoFiltroMes = event.target.value;
-        setFiltroMes(novoFiltroMes);
-      };
+         
+        // const anosDisponiveis = [];
+        // const anoAtual = new Date().getFullYear();
+      
+        // for (let ano = 2000; ano <= anoAtual; ano++) {
+        //   anosDisponiveis.push(ano);
+        // }
 
-      const handleRenderMonth = () => {
-        if (filtroMes === '') {
-        return pagos;
-        } else {
-        const mes = pagos && pagos.filter((boleto) => boleto.CAR_MES === filtroMes)
-        console.log(mes);
-        return mes;
-        }
-      }
-
+        const pagosFilter = pagos?.map(({ CAR_VALOR_PARCELA, CAR_SITUACAO, CAR_MES, CAR_ANO, CAR_CODIGO_BARRAS, CAR_DT_VENCIMENTO }) =>
+         ({  Mês: CAR_MES,
+          Ano: CAR_ANO,
+          Situação: CAR_SITUACAO,
+          Valor: `R$${CAR_VALOR_PARCELA}`,
+          Vencimento: CAR_DT_VENCIMENTO,
+          'Código de Barras': CAR_CODIGO_BARRAS,
+        }));
+        
+ 
     //  TODOS QUE TIVEREM O novoFiltroMes === renderizem
 
     //"CAR_VALOR_PARCELA": 28,
@@ -80,26 +84,8 @@ export function Boletos() {
             <h2>Boletos</h2>
             <p>* Os serviços são pagos de acordo com o estado atual da moeda e tarifa.</p>
             </div>
-            <div className="filtro">
-                <label htmlFor="filtroMes">Filtrar por mês:</label>
-                <select id="filtroMes" value={filtroMes} onChange={handleFiltroMesChange}>
-                <option value="">Todos</option>
-                <option value="1">Janeiro</option>
-                <option value="2">Fevereiro</option>
-                <option value="3">Março</option>
-                <option value="4">Abril</option>
-                <option value="5">Maio</option>
-                <option value="6">Junho</option>
-                <option value="7">Julho</option>
-                <option value="8">Agosto</option>
-                <option value="9">Setembro</option>
-                <option value="10">Outubro</option>
-                <option value="11">Novembro</option>
-                <option value="12">Dezembro</option>
-                </select>
-            </div>
                 <div className="tabela">
-                {<Table data={data} />}
+                {pagos && vencidos && abertos && <Table data={pagosFilter} />}
                 </div>
                 
                 </div>
