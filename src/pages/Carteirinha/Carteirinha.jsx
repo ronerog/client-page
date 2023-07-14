@@ -24,7 +24,7 @@ export function Carteirinha() {
             console.log(result);
         }
         async function loadDependentes(){
-            const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchDependentes?DataBaseName=sigef_web_teste&MAT=11000')
+            const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchDependentes?DataBaseName=' + localStorage.getItem('api')  + '&MAT=11000')
             const result = await request.json();
             setDep(result);
         }

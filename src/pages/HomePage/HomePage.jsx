@@ -19,10 +19,10 @@ export function HomePage() {
 
 	useEffect(() => {
 		async function fetchData() {
-		  const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_web_teste&MAT=11000');
-		  const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_web_teste&MAT=11000');
-		  const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_web_teste&MAT=11000');
-		  const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_web_teste&MAT=11000');
+		  const abertosRequest = fetch(`http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_web_${banco}&MAT=11000`);
+		  const pagosRequest = fetch(`http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_web_${banco}&MAT=11000`);
+		  const acordosRequest = fetch(`http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_web_${banco}&MAT=11000`);
+		  const vencidosRequest = fetch(`http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_web_${banco}&MAT=11000`);
 	  
 		  const [abertosResponse, pagosResponse, acordosResponse, vencidosResponse] = await Promise.all([abertosRequest, pagosRequest, acordosRequest, vencidosRequest]);
 		  
@@ -38,7 +38,8 @@ export function HomePage() {
 		}
 
 		async function loadUser(){
-            const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_teste&MAT=11000')
+			const banco = localStorage.getItem('api')
+            const request = await fetch(`http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_${banco}&MAT=11000`)
             const result = await request.json();
 			const nome = result.map((cliente) => cliente.CLI_NOME) 
             setNome(nome)

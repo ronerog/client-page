@@ -16,7 +16,7 @@ export function User() {
   useEffect(() => {
 
     async function loadUser(){
-        const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_teste&MAT=11000')
+        const request = await fetch(`http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_${banco}&MAT=11000`)
         const result = await request.json();
         const resultArray = result[0];
         setData(resultArray);
@@ -24,6 +24,10 @@ export function User() {
     }
     loadUser()
 }, [])
+
+//CLI_SENHA_AREA_CLIENTE
+//CLI_ALTERA_SENHA
+//CLI_AREA_CLIENTE
 
   return (
     <>
@@ -53,7 +57,8 @@ export function User() {
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="Nome"
+          label={data?.CLI_NOME}
+          defaultValue={data?.CLI_NOME}
           
         />
 

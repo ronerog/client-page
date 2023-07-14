@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './Login.css'
 
@@ -8,7 +9,20 @@ import {
   FaLock,
 } from 'react-icons/fa'
 
+
+
+
 export function Login() {
+
+  useEffect(() => {
+    const URL = window.location.href
+
+    const split = URL.split("/")[3]
+    
+    console.log(`Essa é minha url ${split}`);
+    
+    localStorage.setItem('api', split)
+}, [])
 
   return (
     <>
