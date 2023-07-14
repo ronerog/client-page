@@ -61,24 +61,24 @@ export function User() {
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="E-mail"
-          // defaultValue={data?.CLI_EMAIL}
+          label={data?.CLI_EMAIL}
+          defaultValue={data?.CLI_EMAIL}
         />
 
         <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="Celular"
-          // defaultValue={data?.CLI_FONE1}
+          label={data?.CLI_FONE1}
+          defaultValue={data?.CLI_FONE1}
         />
 
         <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="Plano"
-          // defaultValue={data?.PLA_NOME}
+          label={data?.PLA_NOME}
+          defaultValue={data?.PLA_NOME}
         />
       </div>
       
@@ -86,30 +86,30 @@ export function User() {
         className="input-user"
           disabled
           id="outlined-disabled"
-          label="Endereço"
-          // defaultValue={data?.CLI_ENDERECO}
+          label={data?.CLI_ENDERECO}
+          defaultValue={data?.CLI_ENDERECO}
         />
       
       <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="Bairro"
-          // defaultValue={data?.CLI_BAIRRO}
+          label={data?.CLI_BAIRRO}
+          defaultValue={data?.CLI_BAIRRO}
         />
          <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="Cidade"
-          // defaultValue={data?.CID_NOME}
+          label={data?.CID_NOME}
+          defaultValue={data?.CID_NOME}
         />
           <TextField
           className="input-user"
           disabled
           id="outlined-disabled"
-          label="Estado"
-          // defaultValue={data?.CID_UF}
+          label={data?.CID_UF}
+          defaultValue={data?.CID_UF}
         />
     </Box>
     </div> 

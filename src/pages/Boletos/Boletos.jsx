@@ -15,11 +15,11 @@ export function Boletos() {
 
     useEffect(() => {
         async function fetchData() {
-          const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_teste_api&MAT=11000');
-          const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_teste_api&MAT=11000');
-          const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_teste_api&MAT=11000');
-          const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_teste_api&MAT=11000');
-      
+          const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_web_teste&MAT=11000');
+          const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_web_teste&MAT=11000');
+          const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_web_teste&MAT=11000');
+          const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_web_teste&MAT=11000');
+          
           const [abertosResponse, pagosResponse, acordosResponse, vencidosResponse] = await Promise.all([abertosRequest, pagosRequest, acordosRequest, vencidosRequest]);
           
           const abertosResult = await abertosResponse.json();

@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import "./HomePage.css";
 
@@ -8,6 +9,53 @@ import {
   } from 'react-icons/fa'
 
 export function HomePage() {
+
+	const [abertos, setAbertos] = useState();
+	const [nome, setNome] = useState();
+	const [pagos, setPagos] = useState();
+	const [acordos, setAcordos] = useState();
+	const [vencidos, setVencidos] = useState();
+	const [valor, setValor] = useState();
+
+	useEffect(() => {
+		async function fetchData() {
+		  const abertosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/abertos?DataBaseName=sigef_web_teste&MAT=11000');
+		  const pagosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/pagos?DataBaseName=sigef_web_teste&MAT=11000');
+		  const acordosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/acordos?DataBaseName=sigef_web_teste&MAT=11000');
+		  const vencidosRequest = fetch('http://jiapi-wpp.vps-kinghost.net:3003/vencidos?DataBaseName=sigef_web_teste&MAT=11000');
+	  
+		  const [abertosResponse, pagosResponse, acordosResponse, vencidosResponse] = await Promise.all([abertosRequest, pagosRequest, acordosRequest, vencidosRequest]);
+		  
+		  const abertosResult = await abertosResponse.json();
+		  const pagosResult = await pagosResponse.json();
+		  const acordosResult = await acordosResponse.json();
+		  const vencidosResult = await vencidosResponse.json();
+	  
+		  setAbertos(abertosResult);
+		  setPagos(pagosResult);
+		  setAcordos(acordosResult);
+		  setVencidos(vencidosResult);
+		}
+
+		async function loadUser(){
+            const request = await fetch('http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_teste&MAT=11000')
+            const result = await request.json();
+			const nome = result.map((cliente) => cliente.CLI_NOME) 
+            setNome(nome)
+		}
+
+		async function loadValor(){
+			const ultimos = pagos.slice(pagos.length - 3)
+			const valores = ultimos.map((cliente) => cliente.CAR)
+
+			//"CAR_MES": 4,
+			//"CAR_ANO": 2020,
+			//"CAR_VALOR_BAIXADO": 25.2,
+		}
+	  
+		fetchData();
+		loadUser();
+	  }, []);
     
     return (
       <>
@@ -17,7 +65,7 @@ export function HomePage() {
 		<div className="app-header-actions">
 
 			<span><FaUserAlt /></span>
-			<h1>Olá, Flávio Pereira!</h1>			
+			<h1>Olá, {nome}!</h1>			
 		
 		</div>
 
@@ -34,7 +82,7 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos em Aberto: <number className="number">9</number></span>
+								<span>Boletos em Aberto: <number className="number">{abertos?.length}</number></span>
 							</h3>
 						</div>
 						<a href="#">
@@ -46,7 +94,7 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos Pagos: <number className="number">70</number></span>
+								<span>Boletos Pagos: <number className="number">{pagos?.length}</number></span>
 							</h3>
 						</div>
 						<a href="#">
@@ -59,7 +107,7 @@ export function HomePage() {
 					<article className="tile">
 						<div className="tile-header">
 							<h3>
-								<span>Boletos Vencidos: <number className="number">3</number></span>
+								<span>Boletos Vencidos: <number className="number">{vencidos?.length}</number></span>
 							</h3>
 						</div>
 						<a href="#">
