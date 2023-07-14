@@ -16,6 +16,7 @@ export function User() {
   useEffect(() => {
 
     async function loadUser(){
+        const banco = localStorage.getItem('api')
         const request = await fetch(`http://jiapi-wpp.vps-kinghost.net:3003/searchmat?DataBaseName=sigef_web_${banco}&MAT=11000`)
         const result = await request.json();
         const resultArray = result[0];
